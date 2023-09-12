@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="led.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="search.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/391025a272.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <section class="pokedex">
+            <section class="pokedex__topButtons">
+                <a class="pokedex__bigButton" href="index.html"></a>
+                <div class="smallButtons">
+                    <button id="smallButtonRed" class="led-off"></button>
+                    <button id="smallButtonYel" class="led-off"></button>
+                    <button id="smallButtonGre" class="led-off"></button>
+                </div>
+            </section>
+
+            <section class="pokedex__screen">
+
+                <div class="screen">
+                    <div class="pokemon">
+
+                    </div>
+
+                </div>
+
+                <div class="screen_bottomhalf">
+                    <button id="searchButton">SØG</button>
+
+                    <div class="searchContainer">
+                        <div class="searchBar">
+                            <form id="myForm" action="">
+                                <input type="text" id="searchInput" placeholder="Enter Pokémon name or ID">
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bars">
+                        <p><i class="fa-solid fa-bars"></i></p>
+                    </div>
+                </div>
+
+
+            </section>
+            <img class="bottom__logo" src="pokedex.png" alt="">
+
+        </section>
+
+        <section class="pokedex__right">
+
+            <section class="pokedex__screenRight">
+                <div class="screen__right">
+                    <ul class="pokeList"></ul>
+                </div>
+
+            </section>
+
+            <div class="switchButtons">
+                <a class="prevPage" href=""><i class="fa-solid fa-left-long"></i></a>
+                <a class="nextPage" href=""><i class="fa-solid fa-right-long"></i></a>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>
