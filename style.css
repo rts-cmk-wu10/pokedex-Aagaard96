@@ -107,9 +107,13 @@ main {
 }
 
 .screen_bottomhalf {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     place-items: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 3em;
 }
 
 #searchButton {
@@ -120,15 +124,6 @@ main {
     border-radius: 50%;
     grid-column: 1;
     cursor: pointer;
-}
-
-.searchContainer {
-    grid-column: 2;
-    text-align: center;
-}
-
-.bars {
-    font-size: 2em;
 }
 
 .bottom__logo {
@@ -162,7 +157,7 @@ main {
 
 .switchButtons,
 .toIndexCtn {
-text-align: center;
+    text-align: center;
 }
 
 .nextPage,

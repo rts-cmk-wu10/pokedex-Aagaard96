@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script defer src="led.js"></script>
     <script defer src="pokemon.js"></script>
-    <script defer src="search.js"></script>
+    <script defer src="datalist.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/391025a272.js" crossorigin="anonymous"></script>
 
@@ -38,19 +38,19 @@
                 <div class="pokeball__loading"></div>
 
                 <div class="screen_bottomhalf">
-                    <button id="searchButton">SØG</button>
 
                     <div class="searchContainer">
-                        <div class="searchBar">
-                            <form id="myForm" action="">
-                                <input type="text">
-                            </form>
-                        </div>
+                        <form autocomplete="off" action="pokemon.html" name="keyword">
+                            <button type="submit" id="searchButton">SØG</button>
+                            <label>
+                                <input type="search" name="keyword" list="pokemonList" class="pokemon__search"
+                                    placeholder="Søg efter pokémon">
+                                <datalist id="pokemonList"></datalist>
+                            </label>
+                        </form>
                     </div>
 
-                    <div class="bars">
-                        <p><i class="fa-solid fa-bars"></i></p>
-                    </div>
+
                 </div>
 
 

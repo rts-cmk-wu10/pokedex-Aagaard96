@@ -1,23 +1,3 @@
-
-// const pokemons = document.querySelector("#pokemons");
-// console.log(pokemons);
-
-
-// for (let index = 0; index < 151; index++) {
-//     fetch(`https://pokeapi.co/api/v2/pokemon/${index + 1}`)
-//         .then(res => res.json())
-//         .then(function (result) {
-//             const option = document.createElement("option")
-//             option.value = result.name
-//             option.innerText = result.name
-//             pokemons.append(option)
-//             //     document.body.innerHTML += `<h1>${result.name}</h1>
-//             // <p>Species: ${result.species.name}</p>
-//             // <img src="${result.sprites.other.dream_world.front_default}" alt="" />`;
-
-
-//         });
-// }
 const URL = new URLSearchParams(window.location.search)
 const OFFSET = parseInt(URL.get("offset") || "0") // parseInt konvertere en string til et number
 const NEXT_PAGE = document.querySelector(".nextPage")
@@ -26,11 +6,9 @@ const PREV_PAGE = document.querySelector(".prevPage")
 
 fetch(`https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}`)
 	.then(function (response) {
-		if (response.status === 200) {
-			return response.json()
-		} else {
-			document.body.innerText += "Ups, noget gik galt. Prøv igen senere."
-		}
+		if (response.status !== 200)
+			throw new Error("fejlbesked kig her")
+		return response.json()
 	})
 	.then(function (data) {
 
@@ -43,7 +21,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}`)
 		const UL = document.querySelector(".pokeList")
 		data.results.forEach(function (result) {
 			const LI = document.createElement("li")
-			LI.innerHTML = `<a class="pokeList__a" href="/pokemon.html?name=${result.name}">${result.name}</a>`
+			LI.innerHTML = `<a class="pokeList__a" href="/pokemon.html?keyword=${result.name}">${result.name}</a>`
 			UL.append(LI)
 		})
+	})
+	.catch(function (error) {
+		window.location.href = "/ups.html"
+		console.log(error)
 	})
