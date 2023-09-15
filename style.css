@@ -126,6 +126,8 @@ form {
     cursor: pointer;
 }
 
+
+
 .bottom__logo {
     width: 75%;
     margin-left: auto;
@@ -149,11 +151,8 @@ form {
     background-color: rgb(255, 255, 255);
     height: 40%;
     margin: 3em auto;
-    place-items: center;
-    display: grid;
     border-radius: 20px;
 }
-
 
 .switchButtons,
 .toIndexCtn {
@@ -169,14 +168,22 @@ form {
     color: white;
     border-radius: 5px;
     font-size: 2em;
+    border: solid black 2px;
+}
+
+.pokemon__search {
+    outline-color: red;
+    font-size: 1.25em;
+    font
 }
 
 .pokeList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    text-align: center;
     font-size: 0.75em;
+    place-items: center;
+    padding-top: 5em;
 }
 
 .pokeList :hover {
@@ -208,13 +215,11 @@ form {
 }
 
 .pokeInfo {
+    display: grid;
+    place-items: center;
     font-size: 0.75em;
     text-align: left;
-}
-
-.dex__abil {
-
-    grid-column: 1;
+    padding-top: 7em;
 }
 
 .pokeball__loading {
@@ -277,4 +282,30 @@ form {
     left: calc(50% - 35px);
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.typeCtn {
+    padding-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    place-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.type {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(75, 167, 238);
+    border: solid black 2px;
+    color: white;
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.fart {
+    margin: 5em;
+    font-size: 4em;
 }

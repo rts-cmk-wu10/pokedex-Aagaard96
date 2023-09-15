@@ -9,7 +9,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("keyword")}`)
 		if (response.status === 200) {
 			return response.json();
 		} else {
-			window.location.href = "indsæt"
 			document.body.innerText += "Ups, noget gik galt. Prøv igen senere.";
 			throw new Error("Request failed with status " + response.status);
 		}
@@ -35,13 +34,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("keyword")}`)
 	</tr>
   `).join('')}
 </table>`;
-
 	})
 	.catch(function (error) {
-		console.error(error);
-		// Handle the error here
-	});
-
+		window.location.href = "/ups.html"
+		console.log(error)
+	})
 
 
 

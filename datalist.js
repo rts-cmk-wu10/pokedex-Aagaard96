@@ -7,7 +7,7 @@ SEARCH_FIELD.addEventListener("focusout", function (event) {
 })
 
 function getDatalist(event) {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=300")
         // status tjek (status kode 200 eller noget andet.)
         .then(function (response) {
             return response.json();
