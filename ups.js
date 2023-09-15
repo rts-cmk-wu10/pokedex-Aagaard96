@@ -1,27 +1,27 @@
-// Function to hide the .fart element
-function hideH1() {
+// funktion der skjuler .fart element
+function hideFart() {
     const errorMessage = document.querySelector(".fart");
     errorMessage.style.display = "none";
 }
 
-// Function to show the .fart element
-function showH1() {
+// funktion der viser .fart element
+function showFart() {
     const errorMessage = document.querySelector(".fart");
     errorMessage.style.display = "block";
 }
 
-// Initially hide the .fart element
+// hide class .fart ved loading
 hideH1();
 
-// Create an interval to toggle the visibility every 2 seconds (2000 milliseconds)
+// opret interval på 2.1 sek
 setInterval(function () {
-    // Check if the element is currently hidden
+    // tjekker om errorMessage er hidden
     const errorMessage = document.querySelector(".fart");
     if (errorMessage.style.display === "none") {
-        // If hidden, show it
+        // hvis none, vis den
         showH1();
     } else {
-        // If shown, hide it
+        // hvis block, hide den
         hideH1();
     }
 }, 2100);
