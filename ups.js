@@ -11,7 +11,7 @@ function showFart() {
 }
 
 // hide class .fart ved loading
-hideH1();
+hideFart();
 
 // opret interval på 2.1 sek
 setInterval(function () {
@@ -19,9 +19,9 @@ setInterval(function () {
     const errorMessage = document.querySelector(".fart");
     if (errorMessage.style.display === "none") {
         // hvis none, vis den
-        showH1();
+        showFart();
     } else {
         // hvis block, hide den
-        hideH1();
+        hideFart();
     }
 }, 2100);
