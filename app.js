@@ -22,7 +22,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}`)
 		data.results.forEach(function (result) {
 			const LI = document.createElement("li")
 			LI.innerHTML = `<a class="pokeList__a" href="/pokemon.html?keyword=${result.name}">${result.name}</a>`
-			UL.append(LI)
+			UL.append(LI)	
 		})
 	})
 	.catch(function (error) {
